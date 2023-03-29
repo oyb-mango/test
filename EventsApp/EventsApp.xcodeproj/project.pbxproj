@@ -107,6 +107,9 @@
 		09EFB92129D39BD9004EB172 /* EventsApp */ = {
 			isa = PBXGroup;
 			children = (
+				09EFB95C29D4087B004EB172 /* Extensions */,
+				09EFB95B29D40869004EB172 /* Coordinators */,
+				09EFB95A29D40856004EB172 /* Conntrollers */,
 				09EFB92229D39BD9004EB172 /* AppDelegate.swift */,
 				09EFB92429D39BD9004EB172 /* SceneDelegate.swift */,
 				09EFB92629D39BD9004EB172 /* ViewController.swift */,
@@ -114,10 +117,6 @@
 				09EFB92B29D39BDA004EB172 /* Assets.xcassets */,
 				09EFB92D29D39BDA004EB172 /* LaunchScreen.storyboard */,
 				09EFB93029D39BDA004EB172 /* Info.plist */,
-				09EFB95229D39C88004EB172 /* AppCoordinator.swift */,
-				09EFB95429D39F37004EB172 /* EventListCoordinator.swift */,
-				09EFB95629D39FC3004EB172 /* EventListViewController.swift */,
-				09EFB95829D3A30F004EB172 /* UIColor+Extensions.swift */,
 			);
 			path = EventsApp;
 			sourceTree = "<group>";
@@ -137,6 +136,31 @@
 				09EFB94529D39BDB004EB172 /* EventsAppUITestsLaunchTests.swift */,
 			);
 			path = EventsAppUITests;
+			sourceTree = "<group>";
+		};
+		09EFB95A29D40856004EB172 /* Conntrollers */ = {
+			isa = PBXGroup;
+			children = (
+				09EFB95629D39FC3004EB172 /* EventListViewController.swift */,
+			);
+			path = Conntrollers;
+			sourceTree = "<group>";
+		};
+		09EFB95B29D40869004EB172 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				09EFB95229D39C88004EB172 /* AppCoordinator.swift */,
+				09EFB95429D39F37004EB172 /* EventListCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		09EFB95C29D4087B004EB172 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09EFB95829D3A30F004EB172 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

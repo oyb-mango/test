@@ -18,7 +18,10 @@ class EventListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        view.backgroundColor = .red
-        
+        setupViews()
+    }
+
+    private func setupViews() {
         let plusImage = UIImage(systemName: "plus.circle.fill")
         let barButtonItem = UIBarButtonItem(image: plusImage, style: .plain, target: self, action: #selector(tappedRightBarButton))
         barButtonItem.tintColor = .primary
@@ -26,7 +29,7 @@ class EventListViewController: UIViewController {
         navigationItem.title = "Event"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-
+    
     @objc private func tappedRightBarButton() {
         print("tapped right bar button ----")
     }
