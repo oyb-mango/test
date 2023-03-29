@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import CoreData
 
 class EventListViewController: UIViewController {
+    private let coreDataManager = CoreDataManager()
 
     static func instantiate() -> EventListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -19,6 +21,8 @@ class EventListViewController: UIViewController {
         super.viewDidLoad()
 //        view.backgroundColor = .red
         setupViews()
+        coreDataManager.saveEvent(name: "111", date: Date(), image: UIImage(imageLiteralResourceName: "test"))
+        print(coreDataManager.fetchEvents())
     }
 
     private func setupViews() {
