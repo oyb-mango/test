@@ -18,9 +18,9 @@ final class AddEventCoordinator: Coordinator {
     }
     
     func start() {
-        let addEventViewController = AddEventViewController()
         let addEventViewModel = AddEventViewModel()
-        addEventViewController.viewModel = addEventViewModel
+        let addEventViewController = AddEventViewController(viewModel: addEventViewModel)
+//        addEventViewController.viewModel = addEventViewModel
         addEventViewModel.coordinator = self
 
         navigationController.present(addEventViewController, animated: true)
