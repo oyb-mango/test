@@ -20,8 +20,4 @@ class AddEventViewController: UIViewController {
         super.viewDidDisappear(animated)
         viewModel.viewDidDisappear()
     }
-    
-    deinit {
-        print("add event vc deinit")
-    }
 }

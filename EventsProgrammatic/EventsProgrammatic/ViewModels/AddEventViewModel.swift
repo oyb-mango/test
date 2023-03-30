@@ -13,8 +13,4 @@ final class AddEventViewModel {
     func viewDidDisappear() {
         coordinator?.didFinishAddEvnet()
     }
-    
-    deinit {
-        print("add event vm deinit")
-    }
 }
