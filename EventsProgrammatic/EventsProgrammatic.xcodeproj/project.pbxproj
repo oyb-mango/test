@@ -23,6 +23,8 @@
 		09EFB9BB29D4FB4F004EB172 /* EventsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFB9BA29D4FB4F004EB172 /* EventsListViewModel.swift */; };
 		09EFB9BD29D505C0004EB172 /* AddEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFB9BC29D505C0004EB172 /* AddEventViewModel.swift */; };
 		09EFB9BF29D505D9004EB172 /* AddEventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFB9BE29D505D9004EB172 /* AddEventCoordinator.swift */; };
+		09EFB9C129D51F82004EB172 /* TitleSubtitleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFB9C029D51F82004EB172 /* TitleSubtitleCellViewModel.swift */; };
+		09EFB9C429D51FE9004EB172 /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EFB9C329D51FE9004EB172 /* TitleSubtitleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		09EFB9BA29D4FB4F004EB172 /* EventsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewModel.swift; sourceTree = "<group>"; };
 		09EFB9BC29D505C0004EB172 /* AddEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewModel.swift; sourceTree = "<group>"; };
 		09EFB9BE29D505D9004EB172 /* AddEventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventCoordinator.swift; sourceTree = "<group>"; };
+		09EFB9C029D51F82004EB172 /* TitleSubtitleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellViewModel.swift; sourceTree = "<group>"; };
+		09EFB9C329D51FE9004EB172 /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		09EFB97B29D4F226004EB172 /* EventsProgrammatic */ = {
 			isa = PBXGroup;
 			children = (
+				09EFB9C229D51FAA004EB172 /* Views */,
 				09EFB9B429D4F77A004EB172 /* ViewModels */,
 				09EFB9AF29D4F5AD004EB172 /* Coordinators */,
 				09EFB9AC29D4F507004EB172 /* ViewControllers */,
@@ -168,8 +173,17 @@
 			children = (
 				09EFB9BA29D4FB4F004EB172 /* EventsListViewModel.swift */,
 				09EFB9BC29D505C0004EB172 /* AddEventViewModel.swift */,
+				09EFB9C029D51F82004EB172 /* TitleSubtitleCellViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		09EFB9C229D51FAA004EB172 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09EFB9C329D51FE9004EB172 /* TitleSubtitleCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,12 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09EFB9C429D51FE9004EB172 /* TitleSubtitleCell.swift in Sources */,
 				09EFB98129D4F226004EB172 /* EventListViewController.swift in Sources */,
 				09EFB9AE29D4F56A004EB172 /* AddEventViewController.swift in Sources */,
 				09EFB9B129D4F5C4004EB172 /* AppCoordinator.swift in Sources */,
 				09EFB9BB29D4FB4F004EB172 /* EventsListViewModel.swift in Sources */,
 				09EFB97D29D4F226004EB172 /* AppDelegate.swift in Sources */,
 				09EFB9BD29D505C0004EB172 /* AddEventViewModel.swift in Sources */,
+				09EFB9C129D51F82004EB172 /* TitleSubtitleCellViewModel.swift in Sources */,
 				09EFB97F29D4F226004EB172 /* SceneDelegate.swift in Sources */,
 				09EFB9B329D4F6BA004EB172 /* EventListCoordinator.swift in Sources */,
 				09EFB9B929D4F9D2004EB172 /* CoreDataManager.swift in Sources */,
