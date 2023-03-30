@@ -10,14 +10,14 @@ import UIKit
 class AddEventViewController: UIViewController {
     var viewModel: AddEventViewModel
     
-//    private let tableView: UITableView = {
-//        let tableView = UITableView()
-//        tableView.backgroundColor = .lightGray
-//        tableView.allowsSelection = true
-//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-//        tableView.translatesAutoresizingMaskIntoConstraints = false
-//        return tableView
-//    }()
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.backgroundColor = .lightGray
+        tableView.allowsSelection = true
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
     
     init(viewModel: AddEventViewModel) {
         self.viewModel = viewModel
@@ -32,8 +32,8 @@ class AddEventViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         
-//        tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -43,25 +43,25 @@ class AddEventViewController: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .blue
-//        view.addSubview(tableView)
-//        
-//        NSLayoutConstraint.activate([
-//            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-//            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-//            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-//        ])
+        view.addSubview(tableView)
+
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
 }
 
-//extension AddEventViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
-//
-//
-//}
+extension AddEventViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = "1111"
+        return cell
+    }
+}
