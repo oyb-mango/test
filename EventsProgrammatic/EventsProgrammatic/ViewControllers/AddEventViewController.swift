@@ -3,7 +3,7 @@
 //  EventsProgrammatic
 //
 //  Created by OldYellowBricks on 3/29/23.
-//
+//  https://www.youtube.com/watch?v=GsOagCW4w8k&list=PLLvVbXNzMjks_NtDCdluOYXdo8Ikx2GjH&index=5
 
 import UIKit
 
@@ -13,7 +13,7 @@ class AddEventViewController: UIViewController {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .lightGray
+//        tableView.backgroundColor = .lightGray
         tableView.allowsSelection = true
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,6 +41,15 @@ class AddEventViewController: UIViewController {
             self?.tableView.reloadData()
         }
         viewModel.viewDidLoad()
+        navigationItem.title = viewModel.title
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        // MARK:  should be working for enlarging title but still small title
+//        tableView.contentInsetAdjustmentBehavior = .never
+//        tableView.setContentOffset(.init(x: 0, y: -2), animated: false)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(tappedDoneButton))
+        navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -49,7 +58,6 @@ class AddEventViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .blue
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -58,6 +66,10 @@ class AddEventViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+    }
+    
+    @objc private func tappedDoneButton() {
+        viewModel.tappedDoneButton()
     }
 }
 

@@ -18,14 +18,20 @@ final class AddEventCoordinator: Coordinator {
     }
     
     func start() {
+        let modelNavigationController = UINavigationController()
         let addEventViewModel = AddEventViewModel()
         let addEventViewController = AddEventViewController(viewModel: addEventViewModel)
+        modelNavigationController.setViewControllers([addEventViewController], animated: false)
         addEventViewModel.coordinator = self
 
-        navigationController.present(addEventViewController, animated: true)
+        navigationController.present(modelNavigationController, animated: true)
     }
     
     func didFinishAddEvnet() {
         parentCoordinator?.childDidFinish(self)
+    }
+    
+    func disappear() {
+//        parentCoordinator?.childDidFinish(self)
     }
 }
